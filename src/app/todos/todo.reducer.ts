@@ -28,9 +28,10 @@ const _todoReducer = createReducer(
     };
   }) ),
 
+  on(actions.clearComplete, (state) => state.filter( todo => !todo.complete ) ),
   on(actions.toggle, (state, { id }) => {
     return state.map( todo => {
-      if (todo.id == id) {
+      if (todo.id === id) {
         return {
           ...todo,
           complete: !todo.complete

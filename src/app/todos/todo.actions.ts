@@ -20,3 +20,6 @@ export const todoAll = createAction(
     '[TODO] Check All Todo',
     props< {complete: boolean} >()
 );
+export const clearComplete = createAction(
+    '[TODO] Clear All Complete Todo'
+);
