@@ -16,3 +16,7 @@ export const deleteAct = createAction(
     '[TODO] Delete Todo',
     props< {id: number} >()
 );
+export const todoAll = createAction(
+    '[TODO] Check All Todo',
+    props< {complete: boolean} >()
+);
